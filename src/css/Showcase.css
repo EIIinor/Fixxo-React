@@ -9,3 +9,19 @@
         justify-content: space-between;
         align-items: center;
     }
+
+        .showcase .container .showcase-info {
+            text-align: center;
+        }
+
+        .showcase .container .showcase-info h1 {
+            display: block;
+            font-weight: bold;
+            font-size: 4.3rem;
+            text-align: center;
+        }
+
+            .showcase .container .showcase-info p {
+                padding-bottom: 1rem;
+                padding-top: 1rem;
+            }

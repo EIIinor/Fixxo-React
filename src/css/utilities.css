@@ -1,0 +1,40 @@
+
+
+.btn-theme {
+    background-color: #FF7373;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 0;
+    width: 145px;
+    height: 45px;
+    position: relative;
+    line-height:60px;
+    border:none;
+}
+
+.btn-theme::before,
+.btn-theme::after{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+}
+
+.btn-theme::before{
+    left:6px;
+    top:6px;
+    border-left:2px solid white;
+    border-top:2px solid white;
+}
+
+.btn-theme::after{
+    right:6px;
+    bottom:6px;
+    border-right:2px solid white;
+    border-bottom:2px solid white;
+}
+
+.btn-theme:hover {
+    color: black;
+}

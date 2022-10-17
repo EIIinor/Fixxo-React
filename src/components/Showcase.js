@@ -7,7 +7,11 @@ const Showcase = () => {
     <section className='showcase'>
         <div className='container'>
             <img src={LeftImage} alt='' />
-            <div></div>
+            <div className="showcase-info">
+                <h1>SALE UP <p>To 50% Off</p> </h1>
+                <p>Online shopping free home delivery over $100</p>
+                <button className="btn-theme">SHOP NOW</button>
+            </div>
             <img src={RightImage} alt='' />
         </div>
     </section>
