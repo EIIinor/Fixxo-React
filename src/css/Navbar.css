@@ -1,0 +1,14 @@
+.navbar {
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+    .navbar .container {
+        max-width: 1680px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
