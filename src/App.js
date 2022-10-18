@@ -11,7 +11,6 @@ import CompareView from './views/CompareView';
 import WishListView from './views/WishListView';
 import ShoppingCartView from './views/ShoppingCartView';
 import NotFoundView from './views/NotFoundView';
-import FooterSection from './sections/FooterSection';
 
 
 function App() {

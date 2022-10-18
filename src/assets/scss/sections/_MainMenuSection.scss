@@ -1,13 +1,14 @@
 .mainmenu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
     padding-top: 20px;
-    padding-bottom: 20px;
-
+    padding-bottom: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo menuicons"
+                         "menulinks menulinks";
 
     .logo {
-        font-size: 35px;
+        grid-area: logo;
+        font-size: 25px;
         font-weight: 700;
         color: $color-dark;
         text-decoration: none;
@@ -19,14 +20,15 @@
     }
 
     .menu-links {
-        font-weight: 500;
+        grid-area: menulinks;
+        display: none;
+        font-weight: 400;
 
         .menu-link {
             color: $color-dark;
-            font-weight: 500;
+            font-weight: 400;
             text-decoration: none;
-            margin-left: 15px;
-            margin-right: 15px;
+            margin: 10px 15px; 
 
             &:hover {
                 color: $color-theme;
@@ -41,6 +43,7 @@
     }
 
     .menu-icons {
+        grid-area: menuicons;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -72,6 +75,32 @@
             background-color: $color-dark;
             text-decoration: none;
             box-shadow: 0 0 6px 4px $color-shadow;
+        }
+
+        .btn-menu-icon {
+            color: $color-white;
+            background-color: $color-dark;
+            border: none;
+            outline: none;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .mainmenu {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "logo menulinks menuicons";
+
+        .menu-links {
+            grid-area: menulinks;
+            font-weight: 500;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
