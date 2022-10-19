@@ -1,27 +1,40 @@
 .product-grid {
     margin-bottom: 60px;
+    margin-top: 30px;
 
     .container {
-       display: flex;
+       display: block;
+       text-align: center;
+    }
+
+    h1 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 30px;
     }
 
     .card {
-        width: 255px;
         border: none;
         margin-right: auto;
         margin-left: auto;
 
-        img,
+    
         .card-img {
-            height: 210px;
-            background-color: $linear-gradient-light;
+            display: grid;
             position: relative;
+            background-color: $linear-gradient-light;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 210px;
+            }
 
             .card-menu {
                 position: absolute;
                 top: 10px;
                 right: 10px;
-                display: none;
+                display: block;
 
                 .menu-link {
                     background-color: $color-white;
@@ -49,7 +62,7 @@
             .btn-card-theme {
                 position: absolute;
                 bottom: 0;
-                display: none;
+                display: flex;
                 align-items: center;
                 justify-content: center;
                 width: 100%;
@@ -81,10 +94,10 @@
 
         &:hover {
             .card-menu {
-                display: block;
+                display: block !important;
             }
             .btn-card-theme {
-                display: flex;
+                display: flex !important;
             }
         }
     }
