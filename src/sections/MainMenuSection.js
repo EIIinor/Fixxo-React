@@ -10,7 +10,8 @@ const MainMenuSection = () => {
   }
 
   return (
-    <nav className='mainmenu container'>
+    <nav className='mainmenu'>
+      <div className='container'>
         <NavLink className="logo" to='/' end>Fixxo.</NavLink>
         <div className={`menu-links ${ showMenu ? "d-grid": "" }`}>
             <NavLink className="menu-link" to='/' end >Home</NavLink>
@@ -27,6 +28,7 @@ const MainMenuSection = () => {
             <button onClick={toggleMenu} className='d-xl-none menu-icon btn-menu-icon'><i className='fa-regular fa-bars'></i></button>
 
         </div>
+      </div>
     </nav>
   )
 }

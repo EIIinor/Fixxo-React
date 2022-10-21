@@ -5,6 +5,18 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "logo menuicons"
                          "menulinks menulinks";
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+   
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
 
     .logo {
         grid-area: logo;
@@ -92,6 +104,7 @@
         padding-bottom: 20px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "logo menulinks menuicons";
+
 
         .menu-links {
             grid-area: menulinks;
