@@ -4,10 +4,15 @@
     padding-top: 100px;
     margin-bottom: 100px;
 
-    .container-fluid {
+    .container{
         display: flex;
         justify-content: space-between;
         align-items: center;
+ 
+    }
+
+    img {
+        display: none;
     }
 
     .info {
@@ -32,6 +37,16 @@
 
     p {
         margin-bottom: 50px;
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+    .showcase {
+        img {
+            display: flex;
+        }
     }
 
 }

@@ -1,43 +1,45 @@
 .top-picks {
+width: 100%;
+display: flex;
+display: inline-block;
+justify-content: space-between;
+
+
+
 
     .container {
-     width: 100%;
      display: flex;
-     justify-content: space-between;
-     
+ 
 
-    
+
         .shop-now {
             display: flex;
+            display: inline-block;
             justify-content: right;
-            position: relative;
             margin-right: 10px;
-
-            img {
-                width: 640px;
+            margin-bottom: 20px;
             
+
+            .image {
+            }
+
+            .info {
+                position: relative;
+                bottom: 340px;
+                left: 380px;
             }
 
             h1 {
                 color: $color-white;
-                position: absolute;
                 font-weight: 600;
                 font-size: 2,8rem;
-                margin-top: 80px;
-                margin-right: 50px;
+                margin-bottom: 2rem;
 
                 span {
                     display: flex;
                     display: block;
+                    margin-bottom: 35px;
                 }
-            }
-
-            .btn-theme {
-                position: absolute;
-                top: 200px;
-                right: 135px;
-                width: 25%;
-
             }
         }
 
@@ -45,12 +47,14 @@
 
         .flash-sale {
             display: flex;
-            justify-content: left;
-            position: relative;
+            display: inline-block;
             margin-left: 10px;
-
-            img {
-                width: 640px;
+            margin-bottom: 20px;
+         
+            .info {
+                position: relative;
+                bottom: 340px;
+                left: 50px;
             }
 
             h1 {
@@ -58,23 +62,19 @@
                 font-weight: 600;
                 font-size: 2,8rem;
                 margin-bottom: 2rem;
-                position: absolute;
-                margin-top: 80px;
-                margin-left: 50px;
 
                 span {
                     display: flex;
                     display: block;
+                    margin-bottom: 35px;
+      
                 }
             }
-
-            .btn-theme {
-                position: absolute;
-                top: 200px;
-                left: 45px;
-                width: 25%;
-            }
-
         }
     }
+}
+
+@media (min-width: 1200px) {
+
+
 }
