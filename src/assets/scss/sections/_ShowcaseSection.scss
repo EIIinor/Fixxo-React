@@ -2,11 +2,11 @@
     background: rgb(230, 230, 230,1) 0%, rgba(245,245,245,1) 100%;
     background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(245,245,245,1) 100%);
     padding-top: 100px;
+    padding-bottom: 50px;
     margin-bottom: 100px;
 
-    .container{
+    .container-fluid{
         display: flex;
-        justify-content: space-between;
         align-items: center;
  
     }
@@ -44,6 +44,11 @@
 
 @media (min-width: 1200px) {
     .showcase {
+        .container-fluid {
+            display: flex;
+            justify-content: space-between;
+        }
+
         img {
             display: flex;
         }

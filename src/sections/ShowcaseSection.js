@@ -6,7 +6,7 @@ import ImgMale from '../assets/images/showcase-male-img.png';
 const ShowcaseSection = () => {
   return (
     <section className='showcase'>
-        <div className='container'>
+        <div className='container-fluid'>
             <img src={ImgWoman} alt='showcase img' />
             <div className='info'>
                 <h1>SALE UP <h2>To 50% Off</h2></h1>

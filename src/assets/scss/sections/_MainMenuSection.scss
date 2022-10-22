@@ -7,15 +7,12 @@
                          "menulinks menulinks";
     background-color: transparent;
     position: fixed;
-    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-   
+    width: 100%;
+
 
     .container {
         display: flex;
-        align-items: center;
     }
 
 
@@ -105,7 +102,13 @@
         padding-bottom: 20px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "logo menulinks menuicons";
+        width: 100%;
 
+        .container {
+            display: flex;
+            justify-content: center;
+            
+        }
 
         .menu-links {
             grid-area: menulinks;
@@ -116,5 +119,7 @@
             justify-content: center;
             align-items: center;
         }
+       
     }
+
 }
