@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import GrayImage from '../assets/images/gray-img.png'
+import ProductCard from '../components/ProductCard'
 
 
 const OfferGridSection = () => {
