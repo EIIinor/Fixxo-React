@@ -1,0 +1,36 @@
+.customer-info {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+
+    .container {
+        display: flex;
+        justify-content: center;
+
+        .info {
+            border-top: 1px solid gray;
+            display: inline-block;
+            justify-items: center;
+            text-align: center;
+            width: 250px;
+        }
+
+        img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            padding: 12px;
+            box-shadow: 0 0 6px 8px $color-shadow;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}

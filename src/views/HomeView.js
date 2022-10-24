@@ -5,6 +5,8 @@ import ProductGridSection from '../sections/ProductGridSection'
 import ShowcaseSection from '../sections/ShowcaseSection'
 import TopPicksSection from '../sections/TopPicksSection'
 import OfferGridSection from '../sections/OfferGridSection'
+import OfferAndCardsSection from '../sections/OfferAndCardsSection'
+import CustomerInfoSection from '../sections/CustomerInfoSection'
 
 const HomeView = () => {
 
@@ -30,6 +32,8 @@ const HomeView = () => {
       <ProductGridSection products={featuredProducts} />
       <TopPicksSection />
       <OfferGridSection />
+      <OfferAndCardsSection />
+      <CustomerInfoSection />
       <FooterSection />
     </>
   )
