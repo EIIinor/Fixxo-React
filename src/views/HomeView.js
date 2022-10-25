@@ -9,6 +9,7 @@ import OfferAndCardsSection from '../sections/OfferAndCardsSection'
 import CustomerInfoSection from '../sections/CustomerInfoSection'
 
 const HomeView = () => {
+  window.top.document.title = 'Fixxo.'
 
   const [featuredProducts, setFeaturedProducts] = useState ([
     { id: 1, name: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, img:"https://images.pexels.com/photos/13641487/pexels-photo-13641487.jpeg?cs=srgb&dl=pexels-eyup-beyhan-13641487.jpg&fm=jpg&h=210&w=255&fit=crop&_gl=1*1fjap93*_ga*MTE3NDI4NDgyMS4xNjY2MTg0MTM4*_ga_8JE65Q40S6*MTY2NjE4NDEzOC4xLjEuMTY2NjE4NDQ3MS4wLjAuMA.." },

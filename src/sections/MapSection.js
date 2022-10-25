@@ -1,13 +1,17 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import Map from '../assets/images/map.svg'
+
+
 
 const MapSection = () => {
   return (
-    <div className='map'>
-        <h1 className="fa-solid fa-house">Contacts</h1>
-        <img src={Map} alt='map image' />
-    </div>
+    <iframe 
+      className='map'
+      title='google-map'
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17939.074611463086!2d15.851189693585885!3d61.796394874240576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1666682636825!5m2!1ssv!2sse" 
+      allowFullScreen="" 
+      loading="lazy" 
+      referrerPolicy="no-referrer-when-downgrade">
+      </iframe>
   )
 }
 

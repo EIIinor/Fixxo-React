@@ -4,6 +4,8 @@ import FooterSection from '../sections/FooterSection'
 import { useParams } from 'react-router-dom'
 
 const ProductDetailsView = () => {
+  window.top.document.title = 'Product Details | Fixxo.'
+
     const params = useParams()
   return (
     <>
