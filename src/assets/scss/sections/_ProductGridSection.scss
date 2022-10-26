@@ -1,5 +1,5 @@
 .product-grid {
-    margin-bottom: 60px;
+
     margin-top: 30px;
 
     .container {
@@ -11,6 +11,10 @@
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 30px;
+    }
+
+    .col {
+        margin-top: 0px;   
     }
 
     .card {
@@ -73,22 +77,28 @@
 
         .card-body {
             text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
 
             .card-category {
+                margin-bottom: 0px;
                 font-size: 13px;
                 font-weight: 500;
                 color: $color-darkgray;
             }
             .card-title {
+                margin-bottom: 0px;
                 font-size: 16px;
                 font-weight: 600;
             }
             .card-rating {
                 color: $color-theme;
+                margin-bottom: 0px;
             }
             .card-price {
                 font-size: 18px;
                 font-weight: 600;
+                margin-bottom: 0px;
             }
         }
 

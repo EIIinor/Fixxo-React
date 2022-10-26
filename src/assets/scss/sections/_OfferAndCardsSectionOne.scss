@@ -9,7 +9,7 @@
         img {   
             grid-area: img;
             width: 673px;
-            height: 650px;
+            height: 630px;
             position: relative;
         }
 
@@ -17,7 +17,7 @@
             text-align: center;
             position: relative;
             left: 150px;
-            bottom: 600px;
+            bottom: 450px;
 
             h1 {
                 color: $color-white;
@@ -27,7 +27,13 @@
             }
         }
 
+        .col {
+            margin-top: 0px;
+        }
+
+
         .cards {
+            margin-top: 25px;
             margin-right: 80px;
             padding-left: 20px;
             grid-area: card;
@@ -85,7 +91,7 @@
 
                     .btn-card-theme {
                         position: absolute;
-                        bottom: 177px;
+                        bottom: 114px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -96,20 +102,26 @@
                 }
                 .card-body {
                     text-align: center;
+                    padding-top: 10px;
+                    padding-bottom: 5px;
         
                     .card-category {
+                        margin-bottom: 0px;
                         font-size: 13px;
                         font-weight: 500;
                         color: $color-darkgray;
                     }
                     .card-title {
+                        margin-bottom: 0px;
                         font-size: 16px;
                         font-weight: 600;
                     }
                     .card-rating {
+                        margin-bottom: 0px;
                         color: $color-theme;
                     }
                     .card-price {
+                        margin-bottom: 10px;
                         font-size: 18px;
                         font-weight: 600;
                     }
