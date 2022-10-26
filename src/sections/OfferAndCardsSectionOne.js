@@ -4,9 +4,11 @@ import GrayImage from '../assets/images/gray-img.png'
 import ProductCard from '../components/ProductCard'
 
 
-const OfferGridSection = () => {
+const OfferAndCardsSectionOne = ( { products} ) => {
+
+
   return (
-    <section className='offer-section'>
+    <section className='offer-one'>
         <div className='container'>
             <img src={GrayImage} alt=''/>
             <div className='info'>
@@ -17,6 +19,13 @@ const OfferGridSection = () => {
                   SHOP NOW
               </NavLink>
             </div>
+            <div className='cards'>
+              <div className='row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4'>
+                {
+                    products.map(product => <ProductCard key={product.id} product={product} />)
+                }
+              </div>
+            </div>
         </div>
         <div>
        
@@ -25,4 +34,4 @@ const OfferGridSection = () => {
   )
 }
 
-export default OfferGridSection
+export default OfferAndCardsSectionOne

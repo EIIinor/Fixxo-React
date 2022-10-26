@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import GrayImage from '../assets/images/gray-img.png'
+import ProductCard from '../components/ProductCard'
 
 
-const OfferAndCardsSection = () => {
+const OfferAndCardsSectionTwo = ({ products}) => {
+  
   return (
-    <section className='offerAndCards'>
+    <section className='offer-two'>
         <div className='container'>
+           <div className='cards'>
+              <div className='row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4'>
+                {
+                    products.map(product => <ProductCard key={product.id} product={product} />)
+                }
+              </div>
+            </div>
             <img src={GrayImage} alt=''/>
             <div className='info'>
                 <h1>2 FOR USD $29</h1>
@@ -23,4 +32,4 @@ const OfferAndCardsSection = () => {
   )
 }
 
-export default OfferAndCardsSection
+export default OfferAndCardsSectionTwo
