@@ -4,6 +4,7 @@ const ContactFormSection = () => {
     const [contactForm, setContactForm] = useState ({name: '', email:'', comment:''})
     const [formErrors, setFormErrors] = useState ({})
     const [submitted, setSubmitted] = useState (false)
+ 
 
     const validate = (values) => {
         const errors = {}
