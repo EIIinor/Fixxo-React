@@ -10,6 +10,7 @@ const ContactFormSection = () => {
         const errors = {}
         const regex_email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         const regex_name = /^[A-Za-z]+$/
+        
  
 
         if(!values.name)
@@ -59,7 +60,7 @@ const ContactFormSection = () => {
                 <h2>Come in Contact with Us</h2>
                 <form onSubmit={handleSubmit} noValidate>
                     <div>
-                        <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} />
+                        <input id="name" type="text" placeholder="Your Name" value={contactForm.name}  onChange={handleChange} />
                         <div className="errorMessage">{formErrors.name}</div>
                     </div>
                     <div>
