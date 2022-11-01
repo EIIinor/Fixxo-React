@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext} from 'react'
 import { NavLink } from 'react-router-dom'
 import GrayImage from '../assets/images/gray-img.png'
 import ProductCard from '../components/ProductCard'
+import { ProductContext } from '../contexts/contexts'
 
 
-const OfferAndCardsSectionTwo = ({ products}) => {
+const OfferAndCardsSectionTwo = ({title, items = [] }) => {
+
+  const products = useContext (ProductContext)
   
   return (
     <section className='offer-two'>
@@ -12,7 +15,7 @@ const OfferAndCardsSectionTwo = ({ products}) => {
            <div className='cards'>
               <div className='row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4'>
                 {
-                    products.map(product => <ProductCard key={product.id} product={product} />)
+                    items.map(product => <ProductCard key={product.id} item={product} />)
                 }
               </div>
             </div>
