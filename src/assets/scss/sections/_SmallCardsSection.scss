@@ -1,0 +1,36 @@
+.small-cards {
+
+    .container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+
+        .latest {
+            display: flex;
+            display: inline-block;
+
+            h1 {
+                font-size: 1rem;
+            }
+        }
+
+        .best-selling {
+            display: flex;
+            display: inline-block;
+
+            h1 {
+                font-size: 1rem;
+            }
+        }
+
+
+        .top-ranked {
+            display: flex;
+            display: inline-block;
+
+            h1 {
+                font-size: 1rem;
+            }
+        }
+    }
+}

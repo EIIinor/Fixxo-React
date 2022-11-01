@@ -10,6 +10,7 @@ import CustomerInfoSection from '../sections/CustomerInfoSection'
 import WinterClearenceSection from '../sections/WinterClearenceSection'
 import OurSpecialitySection from '../sections/OurSpecialitySection'
 import WinterFashionSection from '../sections/WinterFashionSection'
+import SmallCardsSection from '../sections/SmallCardsSection'
 import { ProductContext } from '../contexts/contexts'
 
 const HomeView = () => {
@@ -30,6 +31,7 @@ const HomeView = () => {
       <OfferAndCardsSectionOne items={productContext.four} />
       <OfferAndCardsSectionTwo items={productContext.four} />
       <WinterFashionSection />
+      <SmallCardsSection />
       <CustomerInfoSection />
       <FooterSection />
     </>
