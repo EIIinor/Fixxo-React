@@ -15,7 +15,7 @@ const OfferAndCardsSectionTwo = ({title, items = [] }) => {
            <div className='cards'>
               <div className='row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4'>
                 {
-                    items.map(product => <ProductCard key={product.id} item={product} />)
+                    items.map(product => <ProductCard key={product.articalNumber} item={product} />)
                 }
               </div>
             </div>

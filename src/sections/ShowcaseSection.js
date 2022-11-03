@@ -9,7 +9,7 @@ const ShowcaseSection = () => {
         <div className='container-fluid'>
             <img src={ImgWoman} alt='showcase img' />
             <div className='info'>
-                <h1>SALE UP <h2>To 50% Off</h2></h1>
+                <h1>SALE UP <span>To 50% Off</span></h1>
                 <p>Online shopping free home delivery over $100</p>
                 <NavLink to="#" className="btn-theme">
                     <span className='corner-left'></span>

@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import MainMenuSection from '../sections/MainMenuSection'
 import BreadcrumbSection from '../sections/BreadcrumbSection'
+import ProductCardSection from '../sections/ProductCardSection'
 import ProductGridSection from '../sections/ProductGridSection'
 import FooterSection from '../sections/FooterSection'
 import { ProductContext } from '../contexts/contexts'
@@ -13,7 +14,8 @@ const ProductsView = () => {
     <>
       <MainMenuSection />
       <BreadcrumbSection currentPage="Products" />
-      <ProductGridSection title="Products" items={productContext.all}/>
+      <ProductCardSection />
+      <ProductGridSection title="Related Products" items={productContext.four}/>
       <FooterSection />
     </>
   )
