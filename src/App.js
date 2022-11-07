@@ -14,6 +14,7 @@ import WishListView from './views/WishListView';
 import ShoppingCartView from './views/ShoppingCartView';
 import NotFoundView from './views/NotFoundView';
 import { ProductsContext, FeaturedProductsContext, FourProductsContext } from './contexts/contexts'
+import {ShoppingCartProvider} from './contexts/ShoppingCartContext'
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ShoppingCartProvider>
       <ProductsContext.Provider value={products}>
       <FeaturedProductsContext.Provider value={featured}>
       <FourProductsContext.Provider value={four}>
@@ -67,6 +69,7 @@ function App() {
       </FourProductsContext.Provider>
       </FeaturedProductsContext.Provider>
       </ProductsContext.Provider>
+      </ShoppingCartProvider>
     </BrowserRouter>
   );
 }
