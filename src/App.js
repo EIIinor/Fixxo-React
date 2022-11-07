@@ -13,43 +13,50 @@ import CompareView from './views/CompareView';
 import WishListView from './views/WishListView';
 import ShoppingCartView from './views/ShoppingCartView';
 import NotFoundView from './views/NotFoundView';
-import { ProductContext } from './contexts/contexts'
+import { ProductsContext, FeaturedProductsContext, FourProductsContext } from './contexts/contexts'
 
 
 function App() {
-  const [products, setProducts] = useState ({
-    featuredProducts: [],
-    four: []
-  })
+  const [products, setProducts] = useState([])
+  const [featured, setFeatured] = useState([])
+  const [four, setFour] = useState([])
+  
 
 
-  useEffect (() => {
+  useEffect(() => {
+    const fetchAllData = async () => {
+      const result = await fetch('https://win22-webapi.azurewebsites.net/api/products')
+      setProducts(await result.json())
+    }
+    fetchAllData()
 
-  const fetchFeaturedProducts = async () => {
-    let result = await fetch ('https://win22-webapi.azurewebsites.net/api/products?take=8')
-    setProducts({...products, featuredProducts: await result.json()})
-  }
-  fetchFeaturedProducts()
+    const fetchFeaturedData = async () => {
+      const result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
+      setFeatured(await result.json())
+    }
+    fetchFeaturedData()
 
-  const fetchFourProducts = async () => {
-    let result = await fetch ('https://win22-webapi.azurewebsites.net/api/products?take=4')
-    setProducts({...products, four: await result.json()})
-  }
-  fetchFourProducts()
+    const fetchFourData = async () => {
+      const result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
+      setFour(await result.json())
+    }
+    fetchFourData()
 
- }, [setProducts])
+  }, [setProducts, setFeatured, setFour])  
 
 
 
 
   return (
     <BrowserRouter>
-      <ProductContext.Provider value={products}>
+      <ProductsContext.Provider value={products}>
+      <FeaturedProductsContext.Provider value={featured}>
+      <FourProductsContext.Provider value={four}>
       <Routes>
         <Route path='/' element={<HomeView />} />
         <Route path='/categories' element={<CategoriesView />} />
         <Route path='/products' element={<ProductsView />} />
-        <Route path='/products/:name' element={<ProductDetailsView />} />
+        <Route path="/products/:id" element={<ProductDetailsView />} />
         <Route path='/contacts' element={<ContactsView />} />
         <Route path='/search' element={<SearchView />} />
         <Route path='/compare' element={<CompareView />} />
@@ -57,7 +64,9 @@ function App() {
         <Route path='/shoppingcart' element={<ShoppingCartView />} />
         <Route path='*' element={<NotFoundView />} />
       </Routes>
-      </ProductContext.Provider>
+      </FourProductsContext.Provider>
+      </FeaturedProductsContext.Provider>
+      </ProductsContext.Provider>
     </BrowserRouter>
   );
 }

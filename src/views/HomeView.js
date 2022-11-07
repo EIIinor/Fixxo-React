@@ -11,11 +11,12 @@ import WinterClearenceSection from '../sections/WinterClearenceSection'
 import OurSpecialitySection from '../sections/OurSpecialitySection'
 import WinterFashionSection from '../sections/WinterFashionSection'
 import SmallCardsSection from '../sections/SmallCardsSection'
-import { ProductContext } from '../contexts/contexts'
+import { FeaturedProductsContext, FourProductsContext } from '../contexts/contexts'
 
 const HomeView = () => {
   window.top.document.title = 'Fixxo.'
-  const productContext = useContext (ProductContext)
+  const products = useContext(FeaturedProductsContext);
+  const four = useContext(FourProductsContext);
   
 
   return (
@@ -25,11 +26,11 @@ const HomeView = () => {
         <ShowcaseSection />
       </header>
       <WinterClearenceSection />
-      <ProductGridSection title="Featured Products" items={productContext.featuredProducts} />
+      <ProductGridSection title="Featured Products" items={products} />
       <TopPicksSection />
       <OurSpecialitySection />
-      <OfferAndCardsSectionOne items={productContext.four} />
-      <OfferAndCardsSectionTwo items={productContext.four} />
+      <OfferAndCardsSectionOne items={four} />
+      <OfferAndCardsSectionTwo items={four} />
       <WinterFashionSection />
       <SmallCardsSection />
       <CustomerInfoSection />

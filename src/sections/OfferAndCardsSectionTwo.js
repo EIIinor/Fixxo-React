@@ -2,13 +2,10 @@ import React, { useContext} from 'react'
 import { NavLink } from 'react-router-dom'
 import GrayImage from '../assets/images/gray-img.png'
 import ProductCard from '../components/ProductCard'
-import { ProductContext } from '../contexts/contexts'
 
 
-const OfferAndCardsSectionTwo = ({title, items = [] }) => {
+const OfferAndCardsSectionTwo = ({ items = [] }) => {
 
-  const products = useContext (ProductContext)
-  
   return (
     <section className='offer-two'>
         <div className='container'>

@@ -12,13 +12,13 @@ const ProductCardSection = () => {
         <div className='container'>
             <div className='card'>
                 <div className='images'>
-                    <img src={bigCardImg} alt='' />
+                    <img src={product.imageName} alt='' />
                     <img className='one' src={smallCardImg} alt='' />
                     <img className='two' src={smallCardImg} alt='' />
                     <img className='three' src={smallCardImg} alt='' />
                 </div>
                 <div className='card-body'>
-                    <h5 className='card-title'>Modern Black Blouse</h5>
+                    <h5 className='card-title'>{product.name}</h5>
                     <p className='title-brand'>SKU: 12345670 BRAND: The Northland</p>
                     <p className='card-rating'>
                         <i className='fa-sharp fa-solid fa-star'></i>
@@ -27,7 +27,7 @@ const ProductCardSection = () => {
                         <i className='fa-sharp fa-solid fa-star'></i>
                         <i className='fa-sharp fa-solid fa-star'></i>
                     </p>
-                    <p className='card-price'>$ 35.00</p>
+                    <p className='card-price'>${product.price}</p>
                     <p className='product-info'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel
                         <span  
