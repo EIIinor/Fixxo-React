@@ -1,6 +1,6 @@
 import React from 'react'
 import {useShoppingCart} from '../contexts/ShoppingCartContext'
-import ShoppingCartItem from "../components/ShoppingCartItem"
+import ShoppingCartItem from './ShoppingCartItem'
 
 const ShoppingCart = () => {
     const {cartItems} = useShoppingCart ()
